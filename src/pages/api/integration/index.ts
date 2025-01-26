@@ -29,19 +29,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).json({
             data: {
                 date: {
-                    created_at: "2025-01-24",
-                    updated_at: "2025-01-24",
+                    created_at: "2025-01-26",
+                    updated_at: "2025-01-26",
                 },
                 description: {
                     app_name: "Website Monitor",
                     app_description: "Monitors website uptime, SSL, and detects errors.",
                     app_logo: "https://res.cloudinary.com/devsource/image/upload/v1737921448/energy-monitoring-icon-vectoreditable-strokelinear-260nw-2555258609_ztkh89.webp",
                     app_url: "https://website-monitor.vercel.app/api/integration",
-                    background_color: "#f0f0f0",
+                    background_color: "#ffffff",
                 },
                 key_features: [
                     "Monitor website uptime and send alerts for downtime.",
-                    "Detect common HTTP errors (400, 401, 403, 500, etc.).",
+                    "Detect common HTTP errors (400, 401, 403,404, 500, 501, 503 etc.).",
                     "Monitor SSL certificate expiration and notify before expiry.",
                     "Track website response time for performance monitoring.",
                     "Detect unexpected content changes on the website.",
