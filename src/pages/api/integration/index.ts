@@ -11,6 +11,8 @@ const cors = Cors({
     methods: ["GET"],
 });
 
+/* eslint-disable */
+
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) {
     return new Promise((resolve, reject) => {
         fn(req, res, (result: any) => {
@@ -33,8 +35,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 description: {
                     app_name: "Website Monitor",
                     app_description: "Monitors website uptime, SSL, and detects errors.",
-                    app_logo: "https://example.com/logo.png",
-                    app_url: "https://website-monitor.vercel.app",
+                    app_logo: "https://res.cloudinary.com/devsource/image/upload/v1737921448/energy-monitoring-icon-vectoreditable-strokelinear-260nw-2555258609_ztkh89.webp",
+                    app_url: "https://website-monitor.vercel.app/api/integration",
                     background_color: "#f0f0f0",
                 },
                 key_features: [

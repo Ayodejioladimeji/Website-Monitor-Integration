@@ -9,6 +9,8 @@ const cors = Cors({
     allowedHeaders: ["Content-Type"],
 });
 
+/* eslint-disable */
+
 // Middleware function to run CORS
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) {
     return new Promise((resolve, reject) => {
@@ -25,14 +27,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === "POST") {
         try {
             const settings: MonitorSettings = req.body;
-            console.log(settings)
-            
+
             if (!settings.url || !settings.url || !settings.checkInterval) {
                 return res.status(400).json({ error: "Missing required settings" });
             }
             
 
             await monitorWebsite(settings);
+
 
             return res.status(200).json({ message: "Monitoring started successfully." });
         } catch (error) {
@@ -42,4 +44,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else {
         return res.status(405).json({ error: "Method not allowed" });
     }
+
+    
 }
