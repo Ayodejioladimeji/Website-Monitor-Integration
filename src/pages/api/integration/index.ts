@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     created_at: "2025-01-26",
                     updated_at: "2025-01-26",
                 },
-                description: {
+                descriptions: {
                     app_name: "Website Monitor",
                     app_description: "Monitors website uptime, SSL, and detects errors.",
                     app_logo: "https://res.cloudinary.com/devsource/image/upload/v1737921448/energy-monitoring-icon-vectoreditable-strokelinear-260nw-2555258609_ztkh89.webp",
